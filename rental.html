@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Application | RentEasy</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">🏠 RentEasy</a><nav><a href="index.html">Home</a><a href="properties.html">Properties</a><a class="active" href="rental.html">Rent Now</a></nav><a class="btn small" href="login.html">Login</a></header>
+<div class="form-page">
+  <form class="form-card wide" onsubmit="submitRental(event)">
+    <h1>Rental Application</h1><p>Enter your details to request a property.</p>
+    <div class="two"><div><label>Full Name</label><input id="rentName" required></div><div><label>Phone</label><input id="rentPhone" required></div></div>
+    <label>Email</label><input id="rentEmail" type="email" required>
+    <label>Property</label>
+    <select id="rentProperty" required>
+      <option value="">Select property</option>
+      <option>Modern Apartment - Chennai</option>
+      <option>Family House - Bangalore</option>
+      <option>Single Room - Hyderabad</option>
+      <option>Luxury Apartment - Nellore</option>
+    </select>
+    <div class="two"><div><label>Move-in Date</label><input id="moveDate" type="date" required></div><div><label>Duration</label><select id="duration" required><option value="">Choose</option><option>1 Month</option><option>6 Months</option><option>1 Year</option></select></div></div>
+    <label>Message</label><textarea id="rentMessage" rows="4" placeholder="Tell the owner anything important..."></textarea>
+    <button class="btn full" type="submit">Submit Rental Request</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

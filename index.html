@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RentEasy | Online Rental Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">🏠 RentEasy</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="properties.html">Properties</a>
+    <a href="rental.html">Rent Now</a>
+    <a href="owner.html">Owner</a>
+  </nav>
+  <a class="btn small" href="login.html">Login</a>
+</header>
+
+<section class="hero">
+  <div>
+    <span class="badge">ONLINE RENTAL PLATFORM</span>
+    <h1>Find a place you'll love to live.</h1>
+    <p>Search apartments, houses and rooms in your preferred location.</p>
+    <div class="search-box">
+      <input id="homeLocation" type="text" placeholder="Enter city, e.g. Chennai">
+      <select id="homeCategory">
+        <option value="">All property types</option>
+        <option value="Apartment">Apartment</option>
+        <option value="House">House</option>
+        <option value="Room">Room</option>
+      </select>
+      <button class="btn" onclick="homeSearch()">Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><h2>Featured Rentals</h2><p>Popular properties available now.</p></div>
+    <a href="properties.html">View all →</a>
+  </div>
+  <div class="grid" id="featuredProperties"></div>
+</section>
+
+<section class="section light">
+  <h2>How RentEasy Works</h2>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Search</h3><p>Choose a location and property type.</p></div>
+    <div class="step"><b>2</b><h3>Compare</h3><p>Check rent, rooms and property details.</p></div>
+    <div class="step"><b>3</b><h3>Apply</h3><p>Send your rental request online.</p></div>
+    <div class="step"><b>4</b><h3>Move In</h3><p>Connect with the property owner.</p></div>
+  </div>
+</section>
+
+<footer>© 2026 RentEasy · Online Rental Platform</footer>
+<script src="script.js"></script>
+<script>renderProperties("featuredProperties", properties.slice(0, 3));</script>
+</body>
+</html>

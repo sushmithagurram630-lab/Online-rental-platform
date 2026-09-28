@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | RentEasy</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar"><a class="logo" href="index.html">🏠 RentEasy</a><nav><a href="index.html">Home</a><a href="properties.html">Properties</a></nav><a class="btn small" href="login.html">Login</a></header>
+<div class="form-page">
+  <form class="form-card" onsubmit="registerUser(event)">
+    <h1>Create Account</h1><p>Join RentEasy as a tenant.</p>
+    <label>Full Name</label><input id="regName" required placeholder="Your full name">
+    <label>Email</label><input id="regEmail" type="email" required placeholder="you@example.com">
+    <label>Phone</label><input id="regPhone" type="tel" required placeholder="10-digit phone number">
+    <label>Password</label><input id="regPassword" type="password" minlength="6" required placeholder="Minimum 6 characters">
+    <button class="btn full" type="submit">Create Account</button>
+    <p class="center">Already registered? <a href="login.html">Login</a></p>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

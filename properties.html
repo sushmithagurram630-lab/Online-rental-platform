@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properties | RentEasy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">🏠 RentEasy</a>
+  <nav><a href="index.html">Home</a><a class="active" href="properties.html">Properties</a><a href="rental.html">Rent Now</a><a href="owner.html">Owner</a></nav>
+  <a class="btn small" href="login.html">Login</a>
+</header>
+
+<section class="page-banner"><h1>Available Properties</h1><p>Find your next home.</p></section>
+
+<section class="section">
+  <div class="filter-bar">
+    <input id="propertySearch" placeholder="Search by city..." oninput="filterProperties()">
+    <select id="propertyType" onchange="filterProperties()">
+      <option value="">All types</option><option>Apartment</option><option>House</option><option>Room</option>
+    </select>
+    <select id="maxRent" onchange="filterProperties()">
+      <option value="">Any rent</option><option value="10000">Up to ₹10,000</option><option value="15000">Up to ₹15,000</option><option value="20000">Up to ₹20,000</option>
+    </select>
+  </div>
+  <div class="grid" id="propertyList"></div>
+</section>
+
+<footer>© 2026 RentEasy</footer>
+<script src="script.js"></script>
+<script>renderProperties("propertyList", properties);</script>
+</body>
+</html>
